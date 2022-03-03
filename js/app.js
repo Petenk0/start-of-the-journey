@@ -4,7 +4,7 @@ let word = ''
 let solution = 'balls'
 let tries = 1
 const maxWordLength = 5
-
+const maxTries = 6
 
 //KEYBOARD
 
@@ -31,21 +31,24 @@ document.addEventListener('keydown',(event) => {
 
 //SUBMIT WORD
 const submitWord = () => {
+    
     if (word.length !== maxWordLength) return
     
-    if(word !== solution){
-        animateRowShake(currentRow())
-    }
-
-    judgeResult(word)
-
+    //if(word !== solution){
         
+    animateTileReveal(currentRow())
+
+    //}
+    setTimeout(() => {
+        judgeResult(word)
+    }, 1500);
     
+    
+    
+    
+ 
 
     
-
-
-    //alert(word)   
 }
 
 
@@ -93,10 +96,18 @@ const currentRow = () => {
 //JUDGE RESULT
 const judgeResult = () => {
     if(word === solution){
-        alert ( 'win')
+        animateTileDance(currentRow())
     }
-    else if( tries >= 6){
-        alert (' Spravne riesenie bolo: ' +solution.toUpperCase() )
+    
+    else if( tries >= maxTries){
+        
+        youLose()
+        setTimeout(() => {
+            alert (' Spravne riesenie bolo: ' +solution.toUpperCase() )
+            window.location.reload()
+        }, 2000);
+        
+
     }
 
     else{
