@@ -1,1 +1,1 @@
-# start-of-the-journey
+#WORDLE the GAME
