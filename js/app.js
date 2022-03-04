@@ -2,7 +2,7 @@
 
 let word = ''
 let solution = 'balls'
-let tries = 5
+let tries = 1
 const maxWordLength = 5
 const maxTries = 6
 
@@ -87,11 +87,16 @@ const currentRow = () => {
 //JUDGE RESULT
 const judgeResult = () => {
     if(word === solution){
+        
+        let audio = new Audio('sound/sound.mp3');
+		audio.play();
         animateTileDance(currentRow())
+
     }
     
     else if( tries >= maxTries){
         
+
         youLose()
         
     }

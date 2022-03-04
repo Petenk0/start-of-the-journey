@@ -64,11 +64,26 @@ const youLose = () => {
     let board = document.querySelector('.board')
     board.classList.add('animate__animated', 'animate__hinge')
     
+    let audio = new Audio('sound/losesound.wav');
+		audio.play();
+    
+
     setTimeout(() => {
-       let wrapper = document.querySelector('.alert-wrapper')
-       wrapper.classList.remove('hidden')
-       
-       //alert (' Spravne riesenie bolo: ' +solution.toUpperCase() )
-       // window.location.reload()
+        let wrapper = document.querySelector('.alert-wrapper')
+        wrapper.classList.remove('hidden')
+        answerReveal()
+    }, 2000);
+
+}
+
+//CORRECT ANSWER WAS REVEAL
+const answerReveal = () => {
+    
+    let button = documennt.querySelector('.alert-solution')
+    button.classList.remove('animate__animated','animate__heartBeat')
+
+    setTimeout(() => {
+        let alert = document.querySelector('.alert-solution')
+        alert.classList.add('animate__animatex','animate__heartBeat')
     }, 2000);
 }
