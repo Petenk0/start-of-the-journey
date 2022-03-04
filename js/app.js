@@ -2,7 +2,7 @@
 
 let word = ''
 let solution = 'balls'
-let tries = 1
+let tries = 5
 const maxWordLength = 5
 const maxTries = 6
 
@@ -33,21 +33,12 @@ document.addEventListener('keydown',(event) => {
 const submitWord = () => {
     
     if (word.length !== maxWordLength) return
-    
-    //if(word !== solution){
-        
+
     animateTileReveal(currentRow())
 
-    //}
     setTimeout(() => {
         judgeResult(word)
     }, 1500);
-    
-    
-    
-    
- 
-
     
 }
 
@@ -102,12 +93,7 @@ const judgeResult = () => {
     else if( tries >= maxTries){
         
         youLose()
-        setTimeout(() => {
-            alert (' Spravne riesenie bolo: ' +solution.toUpperCase() )
-            window.location.reload()
-        }, 2000);
         
-
     }
 
     else{
@@ -115,4 +101,7 @@ const judgeResult = () => {
         tries++
     }
 }
+
+
+
 

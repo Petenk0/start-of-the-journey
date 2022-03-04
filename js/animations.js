@@ -63,4 +63,12 @@ const animateTileDance = (row) => {
 const youLose = () => {
     let board = document.querySelector('.board')
     board.classList.add('animate__animated', 'animate__hinge')
+    
+    setTimeout(() => {
+       let wrapper = document.querySelector('.alert-wrapper')
+       wrapper.classList.remove('hidden')
+       
+       //alert (' Spravne riesenie bolo: ' +solution.toUpperCase() )
+       // window.location.reload()
+    }, 2000);
 }
