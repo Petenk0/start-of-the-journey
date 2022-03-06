@@ -1,13 +1,32 @@
 //DATA
+const allWords = [
+
+    "puppy",
+    "buddy",
+    "tommy",
+    "balls",
+    "curls",
+    "wifey",
+    "hacks",
+    "lorey",
+    "sorry",
+    "tiger",
+    "sonic",
+
+]
+
 
 let word = ''
-let solution = 'balls'
-//allWords[allWords.length * Math.random()| 0 ].toLowerCase()
+let solution = allWords[allWords.length * Math.random() | 0 ].toLowerCase()
 let tries = 1
 const maxWordLength = 5
 const maxTries = 6
 
-console.log(allWords)
+console.dir(solution)
+
+
+
+
 //KEYBOARD
 
 document.addEventListener('keydown',(event) => {
