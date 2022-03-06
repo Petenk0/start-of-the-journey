@@ -2,10 +2,12 @@
 
 let word = ''
 let solution = 'balls'
+//allWords[allWords.length * Math.random()| 0 ].toLowerCase()
 let tries = 1
 const maxWordLength = 5
 const maxTries = 6
 
+console.log(allWords)
 //KEYBOARD
 
 document.addEventListener('keydown',(event) => {
@@ -33,6 +35,12 @@ document.addEventListener('keydown',(event) => {
 const submitWord = () => {
     
     if (word.length !== maxWordLength) return
+
+    //is this a real word
+    if(!allWords.includes(word)){
+        animateRowShake(currentRow())
+        return
+    }
 
     animateTileReveal(currentRow())
 
