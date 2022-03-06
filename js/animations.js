@@ -78,12 +78,9 @@ const youLose = () => {
 
 //CORRECT ANSWER WAS REVEAL
 const answerReveal = () => {
+    let alertSolution = document.querySelector('.alert-solution');
     
-    let button = documennt.querySelector('.alert-solution')
-    button.classList.remove('animate__animated','animate__heartBeat')
-
-    setTimeout(() => {
-        let alert = document.querySelector('.alert-solution')
-        alert.classList.add('animate__animatex','animate__heartBeat')
-    }, 2000);
+    alertSolution.classList.remove('animate__animated','animate__heartBeat');
+    alertSolution.classList.add('animate__animatex','animate__heartBeat');
+    alertSolution.innerHTML = solution.toUpperCase();
 }

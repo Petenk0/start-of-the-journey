@@ -3,8 +3,8 @@
 let word = ''
 
 // | 0 zapis oreže desatinnu časť čisla tj. nastavy ho na integer
-let solution = 'balls'
-//allWords[allWords.length * Math.random() | 0 ].toLowerCase()
+// let solution = 'balls'
+let solution = allWords[allWords.length * Math.random() | 0 ].toLowerCase()
 let tries = 1
 const maxWordLength = 5
 const maxTries = 6
