@@ -1,5 +1,5 @@
 //WORDS DATABASE
-/*const allWords = [
+const allWords = [
 
     "puppy",
     "buddy",
@@ -13,4 +13,4 @@
     "tiger",
     "sonic",
 
-]*/
+]
