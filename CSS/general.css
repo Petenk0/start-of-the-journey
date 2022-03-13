@@ -5,7 +5,7 @@ html,
         padding: 0;
         overflow: hidden;
 
-        }
+    }
 html{
 
     height: -webkit-fill-available;
@@ -71,7 +71,7 @@ body{
     display: none;
 }
 
-.alert-button{
+.tryagain-button{
     border: 2px solid crimson;
     background-color: #d3c8c8;
     color: #121213;
@@ -81,11 +81,19 @@ body{
     padding: 1rem;
 }
 
-.alert-button:hover{
+.tryagain-button:hover{
     background-color: crimson;
     color: white;
 }
-.alert-button:active{
+.tryagain-button:active{
     background-color: rgb(77, 9, 23);
     color: white;
+}
+
+.hint{
+    color: white;
+    border: solid red ;
+    border-radius: 5px;
+    padding: 10px;
+    background: linear-gradient(sandyBrown, saddleBrown);
 }
